@@ -41,7 +41,6 @@ function App() {
     }
     setQuantity(quantity + 1)
   }
-  
 
   const removeFromCart = (id) => {
     const updatedCart = cartItems
