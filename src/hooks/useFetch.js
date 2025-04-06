@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export function useFetch(url) {
+const useFetch = (url) => {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -40,3 +40,5 @@ export function useFetch(url) {
 
   return { data, loading, error, handleCancelRequest }
 }
+
+export { useFetch }
