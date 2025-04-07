@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { useFetch } from '../hooks/useFetch'
+import './ProductDetails.css'
 
 const ProductDetails = ({ addToCart }) => {
   const { id } = useParams()
@@ -10,22 +11,23 @@ const ProductDetails = ({ addToCart }) => {
   if (!product) return <p>Producto no encontrado</p>
 
   return (
-    <div>
-      <div>
-        <img 
-          src={product.image} 
-          alt={product.title} 
-        />
+    <div className='main-details-container'>
+      <div className='details-container'>
+        <div className='details-img'>
+          <img
+            src={product.image} 
+            alt={product.title} 
+          />
+        </div>
 
-        <div style={{ flex: 1 }}>
-          <h1>{product.title}</h1>
+        <div className='details-info-container'>
+          <h1 className='product-title-details'>{product.title}</h1>
+          <h3 className='category-deatails'>{product.category}</h3>
           <p>{product.description}</p>
-          <p>${product.price}</p>
+          <p className='price-details'>${product.price} mxn</p>
 
-          <button 
-            onClick={() => addToCart(product)}
-          >
-            Agregar al carrito 🛒
+          <button className='add-to-cart-details' onClick={() => addToCart(product)}>
+            Agregar al carrito
           </button>
         </div>
       </div>

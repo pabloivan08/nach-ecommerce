@@ -1,0 +1,45 @@
+.main-details-container {
+  height: 90dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px;
+}
+.details-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
+}
+.details-img {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.details-img img {
+  padding: 0 10%;
+  max-height: 450px;
+}
+.details-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.add-to-cart-details {
+  margin-top: 24px;
+}
+.category-deatails {
+  color: #9f9f9f;
+  padding: 4px 0 12px;
+  font-size: 1.4rem;
+}
+.price-details {
+  font-size: 24px;
+  padding-top: 12px;
+  font-size: 3rem;
+}
+.product-title-details {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+}

@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 
-import { Navbar } from './components/Navbar'
+import { Navbar } from './components/NavBar'
 import { Home } from './pages/Home'
 import { ProductDetails } from './pages/ProductDetails'
 import { Cart } from './pages/Cart'

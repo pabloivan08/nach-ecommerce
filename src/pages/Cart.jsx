@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import './Cart.css'
 
 const Cart = ({ cartItems, clearCart, removeFromCart, addOneToCart, quantity }) => {
 
@@ -6,45 +7,46 @@ const Cart = ({ cartItems, clearCart, removeFromCart, addOneToCart, quantity }) 
 
   if (cartItems.length === 0) {
     return (
-      <div style={{ padding: '2rem' }}>
-        <h1>Carrito</h1>
-        <p style={{ textAlign: 'center' }}>Tu carrito está vacío.</p>
-        <button>
-          <Link to='/'>Volver al inicio</Link>
-        </button>
+      <div className='empty-cart-container'>
+        <h2 style={{ fontSize: '3rem', padding: '2rem 0' }}>Tu carrito está vacío.</h2>
+        <Link to='/' style={{color: 'white'}}>
+          <button>Volver al inicio</button>
+        </Link>
       </div>
    )
   }
 
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1>Carrito</h1>
+    <div className='main-cart-container'>
       {cartItems.map((item, index) => (
 
-        <div key={index} style={{ marginBottom: '1rem', borderBottom: '1px solid #ccc', paddingBottom: '1rem' }}>
-          <h3>{item.title}</h3>
-          <p>${item.price.toFixed(2)}</p>
+        <div key={index} className='cart-item-container'>
           <div>
-            <button onClick={() => removeFromCart(item.id)}>
+            <h3 className='product-title-details'>{item.title}</h3>
+            <p className='price'>${(item.price * item.quantity).toFixed(2)}</p>
+          </div>
+          <div className='quantity-item-container'>
+            <button className='quantity-button' onClick={() => removeFromCart(item.id)}>
               -
             </button>
-            <p>{item.quantity}</p>
-            <button onClick={() => addOneToCart(item)}>
+            <p className='item-quantity-counter'>{item.quantity}</p>
+            <button className='quantity-button' onClick={() => addOneToCart(item)}>
               +
             </button>
           </div>
-          <p>${(item.price * item.quantity).toFixed(2)}</p>
         </div>
       ))}
-      <h4>Productos totales {quantity}</h4>
-      <h2>Total: ${total.toFixed(2)}</h2>
+      <div className='checkout-container'>
+        <h4 className='total-products-counter'>Productos totales: {quantity}</h4>
+        <h2 className='cart-price'>Total: ${total.toFixed(2)}</h2>
 
-      <button 
-        onClick={clearCart}
-        disabled={cartItems.length === 0}
-      >
-        Vaciar carrito
-      </button>
+        <button 
+          onClick={clearCart}
+          disabled={cartItems.length === 0}
+        >
+          Vaciar carrito
+        </button>
+      </div>
     </div>
   )
 }

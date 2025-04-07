@@ -1,7 +1,7 @@
-
+import './CategoryFilter.css'
 const CategoryFilter = ({ categories, selectedCategory, onSelectCategory }) => {
   return (
-    <div>
+    <div className="category-filter-container">
       <button 
         onClick={() => onSelectCategory('')} 
         className={selectedCategory === '' ? 'selected' : ''}

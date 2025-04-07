@@ -1,5 +1,6 @@
 import { ProductList } from '../components/ProductList'
 import { useFetch } from '../hooks/useFetch'
+import './Home.css'
 
 const Home = ({ addToCart }) => {
 
@@ -8,7 +9,6 @@ const Home = ({ addToCart }) => {
 
   return (
     <div className='home'>
-      <h1>Home</h1>
       <ProductList 
         addToCart={addToCart}
         products={products} 

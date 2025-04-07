@@ -1,0 +1,7 @@
+.category-filter-container {
+  display: flex;
+  justify-content: center;
+}
+.category-filter-container button {
+  margin: 0 4px;
+}
