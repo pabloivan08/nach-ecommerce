@@ -32,6 +32,7 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
 input, button, textarea, select {
   font: inherit;
 }
@@ -72,8 +73,21 @@ button:hover {
   animation: shine 2s infinite;
 }
 @-webkit-keyframes shine {
-  from { -webkit-mask-position: 150%; }
-  to { -webkit-mask-position: -50%; }
+  from {
+    -webkit-mask-position: 150%;
+  }
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+
+@keyframes shine {
+  from {
+    mask-position: 150%;
+  }
+  to {
+    mask-position: -50%;
+  }
 }
 button:focus,
 button:focus-visible {
