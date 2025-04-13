@@ -18,7 +18,7 @@ const CategoryFilter = ({ categories, selectedCategory, onSelectCategory }) => {
         </button>
       ))}
     </div>
-  );
-};
+  )
+}
 
 export { CategoryFilter }

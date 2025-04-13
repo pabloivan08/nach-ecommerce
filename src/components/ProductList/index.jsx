@@ -28,7 +28,7 @@ const ProductList = ({ products, error, loading, addToCart }) => {
   if (!products || products.length === 0) return <p>No hay productos disponibles.</p>
 
   return (
-    <div>
+    <section>
       <CategoryFilter
         categories={categories}
         selectedCategory={selectedCategory}
@@ -43,7 +43,7 @@ const ProductList = ({ products, error, loading, addToCart }) => {
           />
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 

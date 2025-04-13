@@ -4,7 +4,7 @@ import './Home.css'
 
 const Home = ({ addToCart }) => {
 
-	const url = 'https://fakestoreapi.com/products'
+  const url = 'https://fakestoreapi.com/products'
   const { data: products, loading, error } = useFetch(url)
 
   return (
@@ -13,7 +13,7 @@ const Home = ({ addToCart }) => {
         addToCart={addToCart}
         products={products} 
         loading={loading} 
-        error={error}
+        error={error}s
       />
     </div>
   )
