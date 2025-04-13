@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react'
 import { ProductCard } from '../ProductCard'
 import { CategoryFilter } from '../CategoryFilter'
-import { useFilteredProducts } from '../../hooks/useFilterProducts'
+import { useFilteredProducts } from '../../hooks/useFilteredProducts'
 import './ProductList.css'
 
 const ProductList = ({ products, error, loading, addToCart }) => {
